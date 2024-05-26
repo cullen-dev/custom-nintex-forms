@@ -95,23 +95,31 @@
     border-top-left-radius: 4px; /* Set the top-left border radius */
 }
 
-/* Change text color of the number inside the tab headers (these numbers are invisible if turned off in "configure pages" menu) */
+/* Change text color of the number inside the tab headers */
+/* (these numbers are invisible if turned off in "configure pages" menu) */
 [dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .mat-step-icon-content span {
     color: #67bd4a !important; /* Set the text color for the step icon */
 }
 
-/* Change text color of the active tab's text */
-/* Active tab should have green text while the rest have black */
+/* Change text color of the active tab's text for all forms except the EHS Hold form */
+/* Active tab should have green text on all forms except for EHS Hold */
 [dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header h4 {
     color: #67bd4a !important; /* Set the text color for the active tab title */
     font-weight: normal; /* Set the font weight to normal */
 }
 
-/* Change text color of the "Current Step" tab to Orange when _Status = "Hold" */
-[dir] .nx-theme-styles mat-step-header.mat-primary[data-e2e="pageTitleIndex-0"] .nx-stepper-header h4 {
-    color: #FFA500 !important; /* Set the text color for the active tab title */
+/* EHS Hold Form Specific - Change text color of the "Current Step" tab to orange when active */
+.ng-tns-c1598381519-233.ng-star-inserted mat-step-header.mat-primary[aria-selected="true"][data-e2e="pageTitleIndex-0"] .nx-stepper-header h4 {
+    color: #FFA500 !important; /* Set the text color for the active tab title to orange */
     font-weight: normal; /* Set the font weight to normal */
 }
+
+/* Change text color of the inactive tab's text */
+[dir] .nx-theme-styles mat-step-header .nx-stepper-header h4 {
+    color: black !important; /* Set the text color for the inactive tab title */
+    font-weight: normal; /* Set the font weight to normal */
+}
+
 
 .custom-tooltip {
   position: relative;
