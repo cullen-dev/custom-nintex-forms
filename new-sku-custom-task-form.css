@@ -1,6 +1,6 @@
 /* New SKU Process Custom CSS */
 
-/**** Group: Form Heading Styling ****/
+/**** Group: Form Header Styling ****/
 /** Format logo img, "current step" text, background color **/
 
 /* Hide the Header bottom border and set its background color */
@@ -14,7 +14,7 @@
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-/* Resize the header image */
+/* Resize the header (logo) image */
 .nx-form-heading img {
     width: 250px; /* Set the width of the image */
     height: auto; /* Maintain the aspect ratio */
@@ -23,6 +23,7 @@
 }
 
 /* Container for the header text */
+/* Aligns "Current Step" container to far right of form header */
 .nx-form-heading .text-container {
     display: flex;
     flex-direction: column;
@@ -31,14 +32,15 @@
     padding-right: 10px; /* Add padding to the right */
 }
 
-/* Style for the current step text */
+/* Style for the "Current Step" header text element */
 .nx-form-heading .current-label-static {
     font-size: 14px; /* Set the text size */
     font-weight: bold; /* Make the text bold */
     color: white; /* Set text color to white */
 }
 
-/* Style for the item ID text */
+/* Style for the "Step Name" header text element */
+/* ex. "Formulations" */
 .nx-form-heading .current-step {
     font-size: 24px; /* Set the text size */
     font-weight: normal; /* Set the text weight to normal */
@@ -61,7 +63,7 @@
 
 /**** Group: Custom Submit Button Styling ****/
 
-/* Ensure the custom Submit button remains visible and is right-aligned */
+/* Styling and positioning for Custom Submit Button */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
@@ -74,20 +76,10 @@
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-/* General styling for nx-theme-button-1 */
-/* nx-theme-button-1 is the general element for all Submit buttons; user created or default. Nx-theme-button-2 is all other custom buttons that are not submit buttons. We specify our custom button by adding .custom-button-right-align */
-[dir] .nx-theme-styles .nx-theme-button-1 {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
-    font-size: 14px; /* Set the font size */
-    border-radius: 4px; /* Set the border radius */
-    padding: 10px 20px; /* Set padding for the button */
-    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
-}
-
 /**** Group: Tab Header Styling ****/
 
-/* General styling for the tab headers */
-/* Set the color for the NON-active tabs to match the active tab. This creates the solid block of grey effect */
+/* Set the background color of the inactive tabs to grey to match the active tab background */ 
+/* This creates the solid block of grey effect */
 [dir] .nx-theme-styles mat-step-header {
     background-color: #f2f2f2; /* Set the background color */
     height: 5px; /* Set the height */
@@ -95,33 +87,27 @@
     border-top-left-radius: 4px; /* Set the top-left border radius */
 }
 
-/* Change text color of the number inside the tab headers */
-/* (these numbers are invisible if turned off in "configure pages" menu) */
-[dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .mat-step-icon-content span {
-    color: #67bd4a !important; /* Set the text color for the step icon */
-}
-
-/* Change text color of the active tab's text for all forms except the EHS Hold form */
-/* Active tab should have green text on all forms except for EHS Hold */
+/* Change text color of the active tab header to green */
 [dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header h4 {
     color: #67bd4a !important; /* Set the text color for the active tab title */
     font-weight: normal; /* Set the font weight to normal */
 }
 
-/* EHS Hold Form Specific - Change text color of the "Current Step" tab to orange when active */
-.ng-tns-c1598381519-233.ng-star-inserted mat-step-header.mat-primary[aria-selected="true"][data-e2e="pageTitleIndex-0"] .nx-stepper-header h4 {
-    color: #FFA500 !important; /* Set the text color for the active tab title to orange */
-    font-weight: normal; /* Set the font weight to normal */
-}
-
-/* Change text color of the inactive tab's text */
+/* Change text color of the inactive tab headers to black */
 [dir] .nx-theme-styles mat-step-header .nx-stepper-header h4 {
     color: black !important; /* Set the text color for the inactive tab title */
     font-weight: normal; /* Set the font weight to normal */
 }
 
+/* Change text color of page number icons in tab headers */
+/* These numbers are hidden unless turned on in "configure pages" menu */
+[dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .mat-step-icon-content span {
+    color: #67bd4a !important; /* Set the text color for the step icon */
+}
 
+/**** Group: Custom Tooltips ****/
 .custom-tooltip {
+
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -162,18 +148,20 @@
   opacity: 1;
 }
 
-/* Target the specific control using its unique ID */
+/**** Group: Status Bar Customizations ****/
+
+/* Target the _Status field using its unique ID */
 #_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-textbox-control {
   display: flex;
   flex-direction: column; /* This sets the order of the children to column */
 }
 
-/* Ensure the input stays in its position */
+/* Ensures the _Status value is displayed in the correct position within the textbox */
 #_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-input {
   order: 1;
 }
 
-/* Ensure the label is placed after the input */
+/* Ensure the _Status field label is placed below the textbox */
 #_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-label {
   order: 2;
 }
@@ -217,6 +205,9 @@
   visibility: visible;
   opacity: 1;
 }
+
+/**** Group: Progress Bar Styles ****/
+
 
 .stepper-wrapper {
   margin-top: auto;
@@ -310,21 +301,53 @@
   content: none;
 }
 
-/**** Hold Status Specific Styles ****/
+/* Ensure the lines do not wrap and each part is displayed on separate lines */
+.step-name .line {
+    white-space: nowrap; /* Prevents text wrapping */
+}
 
-/* Custom formatting for EHS (Hold) progress bar tooltip */
+.step-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-name strong {
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/**** Group: Hold Status Specific Styles ****/
+/** These styles are only applied on hold forms and to specific form elements **/
+
+/** Hold Tab Header Styles **/
+
+/* EHS Hold - Change text color of the "Current Step" tab header to orange when active */
+[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header[title="Current Step"] h4 {
+    color: #FFA500 !important; /* Set the text color for the active tab title to orange */
+    font-weight: normal; /* Set the font weight to normal */
+}
+/* EHS Hold - Change text color of "Current Step" tab header to black when inactive */
+[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header .nx-stepper-header[title="Current Step"] h4 {
+    color: black !important; /* Set the text color for the inactive "Current Step" tab title */
+    font-weight: normal; /* Set the font weight to normal */
+}
+
+/** Hold Progress Bar Styles **/
+
+/* EHS Hold - Custom formatting for EHS Hold progress bar tooltip */
+/* Separate "Current Step" and "(Hold)" onto two lines when hovering cursor over EHS (Hold) bubble */
 .custom-tooltiptext .line {
     display: block; /* formats the elements with a line break */
     font-weight: normal; /* bold */
 }
-
-/* Custom formatting for EHS (Hold) progress bar label */
+/* EHS Hold - Custom formatting for EHS Hold progress bar label */
+/* Separate "EHS" and "(Hold)" onto separate lines on the EHS (Hold) bubble */
 .stepper-name .line {
     display: block; /* formats the elements with a line break */
     font-weight: bold; /* bold */    
 }
-
-/* Custom formatting for EHS (Hold) progress bar current step bubble */
+/* EHS Hold - Custom formatting for EHS Hold current step bubble */
+/* Add orange outline, white background, larger font, bold font */
 .stepper-item.active-hold .step-counter {
     border: 2px solid #FFA500; /* orange outline */
     color: #FFA500; /* orange font */
@@ -332,16 +355,9 @@
     font-weight: bold; /* bold font */
     font-size: 16px; /*set font size to 16 */
 }
-
-/* Makes all font bold on the active progress bar item */
+/* EHS Hold - Makes all font bold on the active progress bar item */
 .stepper-item.active-hold {
     font-weight: bold;
 }
 
-mat-step-label nx-stepper-header nx-page-drop-zone [title="Current Step"] {
-    color: #FFA500;
-}
-
-
-
-/* Hold */
+/* End */
