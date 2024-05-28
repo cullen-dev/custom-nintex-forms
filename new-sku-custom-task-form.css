@@ -3,7 +3,7 @@
 /**** Group: Form Header Styling ****/
 /** Format logo img, "current step" text, background color **/
 
-/* Hide the Header bottom border and set its background color */
+/* Hide the header bottom border and set its background color */
 [dir] .nx-theme-styles .nx-form-heading {
     border-bottom-color: transparent !important; /* Make the bottom border transparent */
     background-color: #253e51; /* Set the background color */
@@ -14,7 +14,7 @@
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-/* Resize the header (logo) image */
+/* Resize the header logo image */
 .nx-form-heading img {
     width: 250px; /* Set the width of the image */
     height: auto; /* Maintain the aspect ratio */
@@ -211,7 +211,6 @@
 
 /**** Group: Progress Bar Styles ****/
 
-
 .stepper-wrapper {
   margin-top: auto;
   display: flex;
@@ -306,6 +305,17 @@
   content: none;
 }
 
+/* Formatting for progress bar custom tooltip with multiple lines */
+.custom-tooltiptext .line {
+    display: block; /* formats the elements with a line break */
+    font-weight: normal; /* bold */
+}
+/* Formatting for progress bar bubble label with multiple lines */
+.stepper-name .line {
+    display: block; /* formats the elements with a line break */
+    font-weight: bold; /* bold */    
+}
+
 /* Ensure the lines do not wrap and each part is displayed on separate lines */
 .step-name .line {
     white-space: nowrap; /* Prevents text wrapping */
@@ -320,6 +330,29 @@
 .step-name strong {
     white-space: nowrap; /* Prevents text wrapping */
 }
+
+/**** Group: Radio Button and Checkbox Styles ****/
+
+/* Set checkbox icon fill to green */
+[dir] .nx-theme-styles .nx-theme-checkbox-1 .nx-checkbox .nx-checkbox-faux .nx-icon {
+    fill: #67bd4a;
+}
+
+/* Change checkbox label font to black */
+[dir] .nx-theme-styles .nx-theme-checkbox-1:not(.ng-select-multiple-checkbox) .nx-checkbox .nx-checkbox-container .nx-checkbox-label {
+    color: black !important;
+}
+/* Change radio button "selected" icon to green */
+[dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
+    background-color: #FFFFFF;
+    border: 6px solid #67bd4a;
+}
+
+/* Set radio button label font to black */
+[dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio .nx-radio-container .nx-radio-label {
+	color: black !important;
+}
+
 
 /**** Group: Hold Status Specific Styles ****/
 /** These styles are only applied on hold forms and to specific form elements **/
@@ -339,18 +372,6 @@
 
 /** Hold Progress Bar Styles **/
 
-/* EHS Hold - Custom formatting for EHS Hold progress bar tooltip */
-/* Separate "Current Step" and "(Hold)" onto two lines when hovering cursor over EHS (Hold) bubble */
-.custom-tooltiptext .line {
-    display: block; /* formats the elements with a line break */
-    font-weight: normal; /* bold */
-}
-/* EHS Hold - Custom formatting for EHS Hold progress bar label */
-/* Separate "EHS" and "(Hold)" onto separate lines on the EHS (Hold) bubble */
-.stepper-name .line {
-    display: block; /* formats the elements with a line break */
-    font-weight: bold; /* bold */    
-}
 /* EHS Hold - Custom formatting for EHS Hold current step bubble */
 /* Add orange outline, white background, larger font, bold font */
 .stepper-item.active-hold .step-counter {
