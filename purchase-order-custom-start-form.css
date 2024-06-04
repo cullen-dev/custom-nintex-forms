@@ -168,24 +168,6 @@
   opacity: 1;
 }
 
-/**** Group: _Status Textbox Modifications ****/
-
-/* Target the _Status field using its unique ID */
-#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-textbox-control {
-  display: flex;
-  flex-direction: column; /* This sets the order of the children to column */
-}
-
-/* Ensures the _Status value is displayed in the correct position within the textbox */
-#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-input {
-  order: 1;
-}
-
-/* Ensure the _Status field label is placed below the textbox */
-#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-label {
-  order: 2;
-}
-
 /* Group: Custom Tooltip Styles */
 
 .custom-tooltip {
@@ -361,7 +343,7 @@
 [dir] .nx-theme-styles .nx-theme-checkbox-1:not(.ng-select-multiple-checkbox) .nx-checkbox .nx-checkbox-container .nx-checkbox-label {
     color: black !important;
 }
-/* Change radio button "selected" icon to green */
+/* Change radio button "selected" icon to blue */
 [dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
     background-color: #FFFFFF;
     border: 6px solid #253e51;
@@ -372,7 +354,7 @@
 	color: black !important;
 }
 
-/* Change radio button "selected" icon to green on read-only radio buttons */
+/* Change radio button "selected" icon to blue on read-only radio buttons */
 [dir] .nx-theme-styles  .nx-theme-radio-1 .nx-radio.nx-read-only input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
     background-color: #253e51;
     border: 6px solid #CBCBCB;
@@ -393,22 +375,6 @@
 [dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header .nx-stepper-header[title="Current Step"] h4 {
     color: black !important; /* Set the text color for the inactive "Current Step" tab title */
     font-weight: normal; /* Set the font weight to normal */
-}
-
-/** Hold Progress Bar Styles **/
-
-/* EHS Hold - Custom formatting for EHS Hold current step bubble */
-/* Add orange outline, white background, larger font, bold font */
-.stepper-item.active-hold .step-counter {
-    border: 2px solid #FFA500; /* orange outline */
-    color: #FFA500; /* orange font */
-    background-color: #ffffff; /* white background */
-    font-weight: bold; /* bold font */
-    font-size: 16px; /*set font size to 16 */
-}
-/* EHS Hold - Makes all font bold on the active progress bar item */
-.stepper-item.active-hold {
-    font-weight: bold;
 }
 
 /**** Misc CSS / Optional CSS ****/
