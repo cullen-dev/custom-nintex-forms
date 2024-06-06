@@ -167,7 +167,7 @@
   order: 2;
 }
 
-/* Group: Custom Tooltip Styles */
+/* Group: Custom Tooltip Styles - Master Records */
 
 .custom-tooltip {
   position: relative;
@@ -208,6 +208,8 @@
   visibility: visible;
   opacity: 1;
 }
+
+
 
 /**** Group: Progress Bar Styles ****/
 
@@ -381,9 +383,19 @@
     font-weight: bold; /* bold font */
     font-size: 16px; /*set font size to 16 */
 }
+
 /* EHS Hold - Makes all font bold on the active progress bar item */
 .stepper-item.active-hold {
     font-weight: bold;
+}
+
+/* Hold Custom Workflow Name and ID Label Header */
+/* Changes the _ID text color from green to orange */
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFA500;
 }
 
 /* End */
