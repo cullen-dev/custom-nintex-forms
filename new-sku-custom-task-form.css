@@ -355,19 +355,19 @@
 	color: black !important;
 }
 
-
 /**** Group: Hold Status Specific Styles ****/
 /** These styles are only applied on hold forms and to specific form elements **/
 
 /** Hold Tab Header Styles **/
 
-/* EHS Hold - Change text color of the "Current Step" tab header to orange when active */
-[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header[title="Current Step"] h4 {
+/* Change text color of the current step tab header to orange when active */
+[dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header[title="Current Step"] h4 {
     color: #FFA500 !important; /* Set the text color for the active tab title to orange */
     font-weight: normal; /* Set the font weight to normal */
 }
-/* EHS Hold - Change text color of "Current Step" tab header to black when inactive */
-[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header .nx-stepper-header[title="Current Step"] h4 {
+
+/* Change text color of the "Current Step" tab header to black when inactive */
+[dir] .nx-theme-styles mat-step-header .nx-stepper-header[title="Current Step"] h4 {
     color: black !important; /* Set the text color for the inactive "Current Step" tab title */
     font-weight: normal; /* Set the font weight to normal */
 }
@@ -391,7 +391,7 @@
 
 /* Hold Custom Workflow Name and ID Label Header */
 /* Changes the _ID text color from green to orange */
-.custom-tooltip {
+.custom-tooltip-hold {
   position: relative;
   display: inline-block;
   text-decoration: none;
