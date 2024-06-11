@@ -4,6 +4,34 @@
 /**** Group: Form Header Styling ****/
 /** Format logo img, "current step" text, background color **/
 
+@media only screen and (max-width: 768px) {
+	
+	/* Style for the "Step Name" header text element */
+	/* ex. "Formulations" */
+	.nx-form-heading .current-step {
+		display: none;
+		font-size: 12px; /* Set the text size */
+		font-weight: normal; /* Set the text weight to normal */
+		color: white; /* Set text color to white */
+	}
+
+    /* Adjust the logo for mobile view */
+	.nx-form-heading img {
+		max-width: 80%;
+        height: auto;
+        padding-top: 10px; /* Adjust the padding as needed */
+    }
+	
+	.nx-form-heading {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        text-align: center; /* Ensures text is centered as well */
+        height: 100%; /* Adjust based on your container height */
+    }
+
+}
+
 /* Hide the header bottom border and set its background color */
 [dir] .nx-theme-styles .nx-form-heading {
     border-bottom-color: transparent !important; /* Make the bottom border transparent */
