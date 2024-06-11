@@ -6,29 +6,33 @@
 
 @media only screen and (max-width: 768px) {
 	
-	/* Style for the "Step Name" header text element */
-	/* ex. "Formulations" */
-	.nx-form-heading .current-step {
-		display: none;
-		font-size: 12px; /* Set the text size */
-		font-weight: normal; /* Set the text weight to normal */
-		color: white; /* Set text color to white */
-	}
-
-    /* Adjust the logo for mobile view */
-	.nx-form-heading img {
-		max-width: 80%;
-        height: auto;
-        padding-top: 10px; /* Adjust the padding as needed */
+	/* Style for the inner content */
+	.nx-form-heading {
+		display: flex;
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		height: 100px; /* Adjust the height as needed */
+		text-align: center; /* Center text inside */
     }
 	
-	.nx-form-heading {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        text-align: center; /* Ensures text is centered as well */
-        height: 100%; /* Adjust based on your container height */
+	.nx-form-heading .header-content {
+		display: flex;
+		flex-direction: column; /* Stack logo and text vertically */
+		align-items: center; /* Center horizontally */
+	}
+	
+	/* Adjust the logo for mobile view */
+	.nx-form-heading img {
+		max-width: 80%;
+		height: auto;
+		padding-top: 10px; /* Adjust the padding as needed */
     }
+	
+	.nx-form-heading .form-title {
+		margin-top: 10px; /* Add padding below the logo */
+		font-size: 1.5em; /* Adjust font size as needed */
+		color: white; /* Set text color to white */
+	}
 
 }
 
@@ -70,7 +74,7 @@
 
 /* Style for the "Step Name" header text element */
 /* ex. "Formulations" */
-.nx-form-heading .current-step {
+.nx-form-heading .form-title {
     font-size: 24px; /* Set the text size */
     font-weight: normal; /* Set the text weight to normal */
     color: white; /* Set text color to white */
@@ -411,4 +415,82 @@
 /*Add "passwordclass" to the CSS Style field on a textbox to turn the input into dots */
 [dir] .nx-theme-styles .nx-theme-form ntx-textbox .passwordclass .nx-theme-input-1 { 
   -webkit-text-security: disc;
+}
+
+/**** Purchase Order Embedded CSS ****/
+/* Center the label "Show Password" */
+.custom-show-password .nx-boolean-control .nx-zinc-control-label {
+    text-align: center;
+    display: block;
+}
+
+/* Center the toggle switch */
+.custom-show-password .nx-boolean-control .nx-zinc-control-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Hide the Yes and No text */
+.custom-show-password .nx-boolean-control .nx-checkbox-toggle-off,
+.custom-show-password .nx-boolean-control .nx-checkbox-toggle-on {
+    display: none;
+}
+
+[dir] .nx-theme-styles .nx-theme-form ntx-textbox .passwordclass .nx-theme-input-1 { 
+  -webkit-text-security: disc;
+}
+
+[dir] .nx-theme-styles .nx-theme-form ntx-textbox .centertext .nx-theme-input-1 {
+    text-align: center;
+}
+
+.left-justify-button .nx-button-container {
+    justify-content: flex-start; /* Horizontally left-justify the button */
+}
+
+.bottom-aligned-button .nx-button-container {
+    align-items: flex-end; /* Vertically align the button to the bottom */
+}
+
+
+.nx-button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button if needed */
+    height: 100%; /* Ensure the container takes up the full height */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden-spinner {
+  display: none;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #67bd4a; /* Spinner color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
