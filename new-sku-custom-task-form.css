@@ -61,20 +61,18 @@
     display: none; /* Hide the back button */
 }
 
+/* Hide cancel button and any other default controls in task form */
 ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
     display: none;
 }
 
-/* Generic class for non-submit buttons on form 
+/* Generic class for non-submit buttons on form */
 [dir] .nx-theme-styles  .nx-theme-button-2 {
-    color: #67bd4a;
+    color: #FFFFFF;
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-    border-color: #67bd4a;
-    background-color: #FFFFFF;
-    font-size: 14px;
-    border-radius: 4px;
-} 
-*/
+    border-color: #253e51;
+    background-color: #253e51;
+}
 
 /**** Group: Custom Submit Button Styling ****/
 
