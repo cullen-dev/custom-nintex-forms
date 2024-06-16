@@ -48,8 +48,7 @@
 }
 
 
-/**** Group: Default Button Visibility ****/
-/** Hide Back button, Next button, Default Submit button **/
+/**** Group: Button Styles ****/
 
 /* Hide the next button using its unique data-e2e attribute */
 [dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-next"] {
@@ -69,12 +68,16 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 /* Generic class for non-submit buttons on form */
 [dir] .nx-theme-styles  .nx-theme-button-2 {
     color: #FFFFFF;
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     border-color: #253e51;
     background-color: #253e51;
 }
 
-/**** Group: Custom Submit Button Styling ****/
+/* Hover color for non-submit buttons */
+[dir] .nx-theme-styles  .nx-theme-button-2:not(.nx-read-only):not(:disabled):hover {
+    color: #FFFFFF !important;
+    background-color: #315271 !important;
+    border-color: #315271 !important;
+}
 
 /* Styling and positioning for Custom Submit Button */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button {
@@ -88,6 +91,14 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     width: auto; /* Set the width to auto */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
+
+/* Hover color for custom submit button */
+[dir] .nx-theme-styles  .nx-theme-button-1:not(.nx-read-only):not(:disabled):hover {
+    color: #FFFFFF !important;
+    background-color: #82cf67 !important;
+    border-color: #82cf67 !important;
+}
+
 
 /**** Group: Tab Header Styling ****/
 
