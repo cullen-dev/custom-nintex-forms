@@ -61,6 +61,21 @@
     display: none; /* Hide the back button */
 }
 
+ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
+    display: none;
+}
+
+/* Generic class for non-submit buttons on form 
+[dir] .nx-theme-styles  .nx-theme-button-2 {
+    color: #67bd4a;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    border-color: #67bd4a;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    border-radius: 4px;
+} 
+*/
+
 /**** Group: Custom Submit Button Styling ****/
 
 /* Styling and positioning for Custom Submit Button */
