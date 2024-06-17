@@ -60,7 +60,13 @@
     display: none; /* Hide the back button */
 }
 
-/* Hide cancel button and any other default controls in task form */
+/* Hide the cancel button using its unique data-e2e attribute */
+[dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-cancel"] {
+	display: none;
+}
+
+
+/* Hide task form cancel button and any other default controls in task form */
 ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
     display: none;
 }
@@ -90,6 +96,18 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     display: block; /* Display the button as a block element */
     width: auto; /* Set the width to auto */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+[dir] .nx-theme-styles .nx-theme-form .custom-button-left-align .nx-button-container button {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    float: left; /* Align the button to the right */
+    margin-left: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
 }
 
 /* Hover color for custom submit button */
