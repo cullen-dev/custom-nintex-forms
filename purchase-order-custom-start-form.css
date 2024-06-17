@@ -1,5 +1,11 @@
 /* Purchase Order Task Form Custom CSS */
-/* Updated 6.11.24 */
+/* Updated 6.17.24 */
+
+/*
+Default Colors HEX Values:
+Green: #67bd4a
+Blue #253e51
+*/
 
 /**** Group: Form Header Styling ****/
 /** Format logo img, "current step" text, background color **/
@@ -48,7 +54,7 @@
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-/* Resize the header logo image */
+/* Resize the heading logo image */
 .nx-form-heading img {
     width: 250px; /* Set the width of the image */
     height: auto; /* Maintain the aspect ratio */
@@ -56,8 +62,8 @@
     margin: 0; /* Remove default margins */
 }
 
-/* Container for the header text */
-/* Aligns "Current Step" container to far right of form header */
+/* Container for the heading text */
+/* Aligns "Current Step" container to far right of form heading */
 .nx-form-heading .text-container {
     display: flex;
     flex-direction: column;
@@ -99,15 +105,22 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 /* Generic class for non-submit buttons on form */
 [dir] .nx-theme-styles  .nx-theme-button-2 {
     color: #FFFFFF;
-    border-color: #253e51;
-    background-color: #253e51;
+    border-color: #67bd4a;
+    background-color: #67bd4a;
 }
 
 /* Hover color for non-submit buttons */
 [dir] .nx-theme-styles  .nx-theme-button-2:not(.nx-read-only):not(:disabled):hover {
     color: #FFFFFF !important;
-    background-color: #315271 !important;
-    border-color: #315271 !important;
+    background-color: #82cf67 !important;
+    border-color: #82cf67 !important;
+}
+
+/* Hover color for custom submit button */
+[dir] .nx-theme-styles  .nx-theme-button-1:not(.nx-read-only):not(:disabled):hover {
+    color: #FFFFFF !important;
+    background-color: #82cf67 !important;
+    border-color: #82cf67 !important;
 }
 
 /* Align button right */
@@ -136,13 +149,6 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
 }
 
-/* Hover color for custom submit button */
-[dir] .nx-theme-styles  .nx-theme-button-1:not(.nx-read-only):not(:disabled):hover {
-    color: #FFFFFF !important;
-    background-color: #82cf67 !important;
-    border-color: #82cf67 !important;
-}
-
 /**** Group: Tab Header Styling ****/
 
 /* Set the background color of the inactive tabs to grey to match the active tab background */ 
@@ -154,7 +160,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     border-top-left-radius: 4px; /* Set the top-left border radius */
 }
 
-/* Change text color of the active tab header to green */
+/* Change text color of the active tab header to blue */
 [dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header h4 {
     color: #253e51 !important; /* Set the text color for the active tab title */
     font-weight: normal; /* Set the font weight to normal */
@@ -382,27 +388,27 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 
 /**** Group: Radio Button and Checkbox Styles ****/
 
-/* Set checkbox icon fill to green */
+/* Set checkbox icon (checkmark) color */
 [dir] .nx-theme-styles .nx-theme-checkbox-1 .nx-checkbox .nx-checkbox-faux .nx-icon {
     fill: #253e51;
 }
 
-/* Change checkbox label font to black */
+/* Set checkbox label font color */
 [dir] .nx-theme-styles .nx-theme-checkbox-1:not(.ng-select-multiple-checkbox) .nx-checkbox .nx-checkbox-container .nx-checkbox-label {
     color: black !important;
 }
-/* Change radio button "selected" icon to blue */
+/* Change radio button "selected" icon color */
 [dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
     background-color: #FFFFFF;
     border: 6px solid #253e51;
 }
 
-/* Set radio button label font to black */
+/* Set radio button label font color */
 [dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio .nx-radio-container .nx-radio-label {
 	color: black !important;
 }
 
-/* Change radio button "selected" icon to blue on read-only radio buttons */
+/* Change radio button "selected" color on read-only radio buttons */
 [dir] .nx-theme-styles  .nx-theme-radio-1 .nx-radio.nx-read-only input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
     background-color: #253e51;
     border: 6px solid #CBCBCB;
