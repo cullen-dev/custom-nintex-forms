@@ -74,8 +74,7 @@
 }
 
 
-/**** Group: Default Button Visibility ****/
-/** Hide Back button, Next button, Default Submit button **/
+/**** Group: Button Styles ****/
 
 /* Hide the next button using its unique data-e2e attribute */
 [dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-next"] {
@@ -87,10 +86,31 @@
     display: none; /* Hide the back button */
 }
 
+/* Hide the cancel button using its unique data-e2e attribute */
+[dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-cancel"] {
+	display: none;
+}
 
-/**** Group: Custom Button Styling ****/
+/* Hide task form close button and any other default controls in task form */
+ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
+    display: none;
+}
 
-/* Styling and positioning for Custom Submit Button */
+/* Generic class for non-submit buttons on form */
+[dir] .nx-theme-styles  .nx-theme-button-2 {
+    color: #FFFFFF;
+    border-color: #253e51;
+    background-color: #253e51;
+}
+
+/* Hover color for non-submit buttons */
+[dir] .nx-theme-styles  .nx-theme-button-2:not(.nx-read-only):not(:disabled):hover {
+    color: #FFFFFF !important;
+    background-color: #315271 !important;
+    border-color: #315271 !important;
+}
+
+/* Align button right */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
@@ -103,22 +123,25 @@
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-/* Custom style for .nx-theme-button-2 elements */
-[dir] .nx-theme-styles  .nx-theme-button-2 {
-    color: #FFFFFF;
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-	justify-content: center;
-    border-color: #;
-    background-color: #253e51;
-    font-size: 14px;
-    border-radius: 4px;
+/* Align button left */
+[dir] .nx-theme-styles .nx-theme-form .custom-button-left-align .nx-button-container button {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    float: left; /* Align the button to the right */
+    margin-left: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
 }
 
-/* Custom style when hovering over a .nx-theme-button-2 */
-[dir] .nx-theme-styles  .nx-theme-button-2:not(.nx-read-only):not(:disabled):hover {
-    color: #253e51;
-    background-color: #FFFFFF;
-}	
+/* Hover color for custom submit button */
+[dir] .nx-theme-styles  .nx-theme-button-1:not(.nx-read-only):not(:disabled):hover {
+    color: #FFFFFF !important;
+    background-color: #82cf67 !important;
+    border-color: #82cf67 !important;
+}
 
 /**** Group: Tab Header Styling ****/
 

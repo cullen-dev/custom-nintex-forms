@@ -65,8 +65,7 @@
 	display: none;
 }
 
-
-/* Hide task form cancel button and any other default controls in task form */
+/* Hide task form close button and any other default controls in task form */
 ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
     display: none;
 }
@@ -85,7 +84,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     border-color: #315271 !important;
 }
 
-/* Styling and positioning for Custom Submit Button */
+/* Align button right */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
@@ -98,6 +97,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
+/* Align button left */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-left-align .nx-button-container button {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
