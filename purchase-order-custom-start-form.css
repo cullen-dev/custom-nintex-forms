@@ -598,6 +598,7 @@ Custom CSS class: align-checkbox-short-text */
     /*padding: 0 20px; /* Adjust padding to ensure consistent spacing */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
     text-decoration: none; /* Remove underline for anchor elements */
+	white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* Hover state for both button classes */
