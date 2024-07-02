@@ -159,15 +159,17 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 
 /* Custom style for "How to Use this Form" Button */
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button-right-align .nx-button-container button {
+	background-color: #e9ecee !important;
+	border-color: #e9ecee !important;
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
     border-radius: 4px; /* Set the border radius */
-    float: right; /* Align the button to the right */
+    float: right !important; /* Align the button to the right */
     margin-right: 10px; /* Add margin to the right */
     padding: 10px 20px; /* Set padding for the button */
     display: block; /* Display the button as a block element */
     width: auto; /* Set the width to auto */
-	height: 20px;
+	height: 20px !important;
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
