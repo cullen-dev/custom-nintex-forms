@@ -1,0 +1,411 @@
+/* New Account Request Form Task Form Custom CSS */
+/* Updated 7.2.24 */
+
+/**** Group: Form Header Styling ****/
+/** Format logo img, "current step" text, background color **/
+
+/* Hide the header bottom border and set its background color */
+[dir] .nx-theme-styles .nx-form-heading {
+    border-bottom-color: transparent !important; /* Make the bottom border transparent */
+    background-color: #253e51; /* Set the background color */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Distribute space between items */
+    padding: 10px; /* Set padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+/* Resize the header logo image */
+.nx-form-heading img {
+    width: 250px; /* Set the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Display the image as a block element */
+    margin: 0; /* Remove default margins */
+}
+
+/* Container for the header text */
+/* Aligns "Current Step" container to far right of form header */
+.nx-form-heading .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    margin-left: auto; /* Push the text container to the right */
+    padding-right: 10px; /* Add padding to the right */
+}
+
+/* Style for the "Current Step" header text element */
+.nx-form-heading .current-label-static {
+    font-size: 14px; /* Set the text size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Set text color to white */
+}
+
+/* Style for the "Step Name" header text element */
+/* ex. "Formulations" */
+.nx-form-heading .current-step {
+    font-size: 24px; /* Set the text size */
+    font-weight: normal; /* Set the text weight to normal */
+    color: white; /* Set text color to white */
+}
+
+
+/**** Group: Default Button Visibility ****/
+
+/** Hide Back button, Next button, Default Submit button **/
+
+/* Hide the next button using its unique data-e2e attribute */
+[dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-next"] {
+    display: none; /* Hide the next button */
+}
+
+/* Hide the back button using its unique data-e2e attribute */
+[dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-back"] {
+    display: none; /* Hide the back button */
+}
+
+
+/**** Group: Custom Button Styling ****/
+
+/* Styling and positioning for Custom Submit Button */
+[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    float: right; /* Align the button to the right */
+    margin-right: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+/* General button styling */
+[dir] .nx-theme-styles .nx-theme-form .nx-theme-button-1,
+[dir] .nx-theme-styles .nx-theme-form .nx-theme-button-2 {
+	background-color: #67bd4a !important;
+    border-color: #67bd4a !important;
+	color: white !important;
+}
+
+[dir] .nx-theme-styles  .nx-theme-button-2:not(.nx-read-only):not(:disabled):hover {
+    color: #67bd4a;
+    background-color: #FFFFFF;
+}
+	
+/**** Group: Tab Header Styling ****/
+
+/* Set the background color of the inactive tabs to grey to match the active tab background */ 
+/* This creates the solid block of grey effect */
+[dir] .nx-theme-styles mat-step-header {
+    background-color: #f2f2f2; /* Set the background color */
+    height: 5px; /* Set the height */
+    border-top-right-radius: 4px; /* Set the top-right border radius */
+    border-top-left-radius: 4px; /* Set the top-left border radius */
+}
+
+/* Change text color of the active tab header to green */
+[dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header h4 {
+    color: #67bd4a !important; /* Set the text color for the active tab title */
+    font-weight: normal; /* Set the font weight to normal */
+}
+
+/* Change text color of the inactive tab headers to black */
+[dir] .nx-theme-styles mat-step-header .nx-stepper-header h4 {
+    color: black !important; /* Set the text color for the inactive tab title */
+    font-weight: normal; /* Set the font weight to normal */
+}
+
+/* Change text color of page number icons in tab headers */
+/* These numbers are hidden unless turned on in "configure pages" menu */
+[dir] .nx-theme-styles mat-step-header.mat-primary[aria-selected="true"] .mat-step-icon-content span {
+    color: #67bd4a !important; /* Set the text color for the step icon */
+}
+
+/**** Group: Custom Tooltips ****/
+
+.custom-tooltip {
+
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.custom-tooltip .custom-tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /* Position above the text */
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.custom-tooltip .custom-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Arrow at the bottom */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.custom-tooltip:hover .custom-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/**** Group: _Status Textbox Modifications ****/
+
+/* Target the _Status field using its unique ID */
+#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-textbox-control {
+  display: flex;
+  flex-direction: column; /* This sets the order of the children to column */
+}
+
+/* Ensures the _Status value is displayed in the correct position within the textbox */
+#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-input {
+  order: 1;
+}
+
+/* Ensure the _Status field label is placed below the textbox */
+#_80e57d63588d47ed8ddaafd50cebd371-group-control .nx-zinc-control-label {
+  order: 2;
+}
+
+/* Group: Custom Tooltip Styles */
+
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #67bd4a;
+}
+
+.custom-tooltip .custom-tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -80px; /* Use half of the width (to center it) */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.custom-tooltip .custom-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; /* Arrow pointing down */
+}
+
+.custom-tooltip:hover .custom-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/**** Group: Progress Bar Styles ****/
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2.5px solid #ccc;
+  width: 100%;
+  top: 15px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute; 
+  content: "";
+  border-bottom: 2.5px solid #ccc;
+  width: 100%;
+  top: 15px;
+  left: 50%;
+  z-index: 2;
+}
+
+/* Custom formatting for non-active, non-completed, progress bar bubbles */
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  background: #ccc; /* Set background color to grey */
+  margin-bottom: 6px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Make font bold and centered for active progress bar bubble and label */
+.stepper-item.active {
+  font-weight: bold;
+  text-align: center;
+}
+/* Adds a thin green border around the active progress bar bubble as well as padding to maintain bubble size */
+.stepper-item.active .step-counter {
+  border: 4px solid #67bd4a; /* Style for bubble border weight and color */
+  padding: 8px; /* Adjust padding to maintain size */
+  border-radius: 50%; /* Creates circle shapre */
+}
+/* Sets font weight to normal for active progress bar bubble custom tooltip */
+.stepper-item.active .step-counter .custom-tooltiptext {
+    font-weight: normal;
+}
+/* Makes completed progress bar bubble background color green with white text */
+.stepper-item.completed .step-counter {
+  background-color: #67bd4a;
+  color: #ffffff;
+  text-align: center;
+}
+/* Style for the progres bar path extending from completed bubble */
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2.5px solid #67bd4a;
+  width: 100%;
+  top: 15px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+/* Formatting for progress bar custom tooltip with multiple lines */
+.custom-tooltiptext .line {
+    display: block; /* formats the elements with a line break */
+    font-weight: normal; /* bold */
+}
+/* Formatting for progress bar bubble label with multiple lines */
+.stepper-name .line {
+    display: block; /* formats the elements with a line break */
+    font-weight: bold; /* bold */    
+}
+
+/* Ensure the lines do not wrap and each part is displayed on separate lines */
+.step-name .line {
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.step-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-name strong {
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/**** Group: Radio Button and Checkbox Styles ****/
+
+/* Set checkbox icon fill to green */
+[dir] .nx-theme-styles .nx-theme-checkbox-1 .nx-checkbox .nx-checkbox-faux .nx-icon {
+    fill: #67bd4a;
+}
+
+/* Change checkbox label font to black */
+[dir] .nx-theme-styles .nx-theme-checkbox-1:not(.ng-select-multiple-checkbox) .nx-checkbox .nx-checkbox-container .nx-checkbox-label {
+    color: black !important;
+}
+/* Change radio button "selected" icon to green */
+[dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
+    background-color: #FFFFFF;
+    border: 6px solid #67bd4a;
+}
+
+/* Set radio button label font to black */
+[dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio .nx-radio-container .nx-radio-label {
+	color: black !important;
+}
+
+/* Change radio button "selected" icon to green on read-only radio buttons */
+[dir] .nx-theme-styles  .nx-theme-radio-1 .nx-radio.nx-read-only input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
+    background-color: #67bd4a;
+    border: 6px solid #CBCBCB;
+}
+
+
+/**** Group: Hold Status Specific Styles ****/
+/** These styles are only applied on hold forms and to specific form elements **/
+
+/** Hold Tab Header Styles **/
+
+/* EHS Hold - Change text color of the "Current Step" tab header to orange when active */
+[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header.mat-primary[aria-selected="true"] .nx-stepper-header[title="Current Step"] h4 {
+    color: #FFA500 !important; /* Set the text color for the active tab title to orange */
+    font-weight: normal; /* Set the font weight to normal */
+}
+/* EHS Hold - Change text color of "Current Step" tab header to black when inactive */
+[dir] .nx-theme-styles .ng-tns-c1598381519-391 mat-step-header .nx-stepper-header[title="Current Step"] h4 {
+    color: black !important; /* Set the text color for the inactive "Current Step" tab title */
+    font-weight: normal; /* Set the font weight to normal */
+}
+
+/** Hold Progress Bar Styles **/
+
+/* EHS Hold - Custom formatting for EHS Hold current step bubble */
+/* Add orange outline, white background, larger font, bold font */
+.stepper-item.active-hold .step-counter {
+    border: 2px solid #FFA500; /* orange outline */
+    color: #FFA500; /* orange font */
+    background-color: #ffffff; /* white background */
+    font-weight: bold; /* bold font */
+    font-size: 16px; /*set font size to 16 */
+}
+/* EHS Hold - Makes all font bold on the active progress bar item */
+.stepper-item.active-hold {
+    font-weight: bold;
+}
+
+/* End */
