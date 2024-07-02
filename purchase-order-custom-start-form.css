@@ -160,7 +160,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 /* Custom style for "How to Use this Form" Button */
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button-right-align .nx-button-container button {
 	background-color: #e9ecee !important;
-	border-color: #e9ecee !important;
+	border-color: #898f94 !important;
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
     border-radius: 4px; /* Set the border radius */
