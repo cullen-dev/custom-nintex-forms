@@ -63,25 +63,11 @@ Blue #253e51
 }
 
 /* Container for the heading text */
-/* Aligns "Current Step" container to far right of form heading */
-.nx-form-heading .text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
-    margin-left: auto; /* Push the text container to the right */
-    padding-right: 10px; /* Add padding to the right */
-}
-
-/* ex. "Formulations" */
+/* Heading Text Style ("Purchase Order Form") */
 .nx-form-heading .form-title {
     font-size: 24px; /* Set the text size */
     font-weight: normal; /* Set the text weight to normal */
     color: white; /* Set text color to white */
-}
-
-.nx-form-heading .social {
-    max-width: 300px !important;
-    margin-top: 7px !important;
 }
 
 
