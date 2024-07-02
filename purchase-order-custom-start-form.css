@@ -145,7 +145,24 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
 }
 
-/* Custom "Open Link" button - custom hyperlink button style */
+/* Align button right
+Custom CSS class: custom-button-right-align */
+[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button,
+[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container a {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    float: right; /* Align the button to the right */
+    margin-right: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+    text-decoration: none; /* Remove underline from anchor */
+}
+
+/* "How to Use this Form" Button 
+Custom CSS class: custom-hyperlink-button */
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container button,
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container a {
     background-color: #e9ecee !important;
@@ -156,40 +173,26 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     border-radius: 4px; /* Set the border radius */
     float: right !important;
     margin-right: 10px; /* Add margin to the right */
-    padding: 0 20px; /* Set horizontal padding */
-    display: block; /* Display as a block element */
-    width: auto; /* Set width to auto */
-    height: 40px !important; /* Set height */
-    line-height: 40px; /* Match line height to height for vertical centering */
+    padding: 0 20px; /* Set horizontal padding for the button */
+    display: inline-flex; /* Use inline-flex for consistent behavior */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: auto; /* Set the width to auto */
+    height: 40px !important; /* Set the height */
+    line-height: normal; /* Reset line height to normal */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
     text-align: center; /* Center the text horizontally */
     text-decoration: none; /* Remove underline from anchor */
 }
 
-/* Align button right custom style */
-[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button,
-[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container a {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
-    font-size: 14px; /* Set the font size */
-    border-radius: 4px; /* Set the border radius */
-    float: right; /* Align to the right */
-    margin-right: 10px; /* Add margin to the right */
-    padding: 10px 20px; /* Set padding */
-    display: block; /* Display as a block element */
-    width: auto; /* Set width to auto */
-    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
-    text-decoration: none; /* Remove underline from anchor */
-}
-
-/* Hover state for both align button right and custom hyperlink button classes */
+/* Hover state for both custom-button-right-align and custom-hyperlink-button */
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container button:hover,
-[dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container a:hover,
-[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button:hover,
-[dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container a:hover {
+[dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container a:hover {
     background-color: #d0d0d0 !important; /* Slightly darker grey for hover */
     border-color: #898f94 !important; /* Keep border color the same */
     color: #575c61 !important; /* Keep font color the same */
 }
+
 
 
 /**** Group: Tab Header Styling ****/
