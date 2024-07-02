@@ -79,6 +79,11 @@ Blue #253e51
     color: white; /* Set text color to white */
 }
 
+.nx-form-heading .social {
+    max-width: 300px !important;
+    margin-top: 7px !important;
+}
+
 
 /**** Group: Button Styles ****/
 
@@ -96,6 +101,9 @@ Blue #253e51
 [dir] .nx-theme-styles .nx-theme-form button[data-e2e="btn-cancel"] {
 	display: none;
 }
+
+/* unsure what this was for... 
+[dir] .nx-label-symbols .ng-st */
 
 /* Hide task form close button and any other default controls in task form */
 ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-container {
@@ -147,6 +155,20 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     display: block; /* Display the button as a block element */
     width: auto; /* Set the width to auto */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
+}
+
+/* Custom style for "How to Use this Form" Button */
+[dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button-right-align .nx-button-container button {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    float: right; /* Align the button to the right */
+    margin-right: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+	height: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
 /**** Group: Tab Header Styling ****/
@@ -397,6 +419,14 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 [dir] .nx-theme-styles .nx-theme-checkbox-1:not(.ng-select-multiple-checkbox) .nx-checkbox .nx-checkbox-container .nx-checkbox-label {
     color: black !important;
 }
+
+/* Align checkboxes with short text (add "align-checkbox-short-text" to CSS class property on checkbox */
+.align-checkbox-short-text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 /* Change radio button "selected" icon color */
 [dir] .nx-theme-styles .nx-theme-radio-1 .nx-radio input[type=radio]:checked + .nx-radio-container .nx-radio-faux {
     background-color: #FFFFFF;
@@ -515,4 +545,47 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/**** Additional Button Styles ****/
+
+/* Center buttons horizontally and vertically */
+.nx-button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button if needed */
+    height: 100%; /* Ensure the container takes up the full height */
+}
+
+/* General button size */
+[dir] .nx-theme-styles .nx-theme-form .nx-theme-button-1,
+[dir] .nx-theme-styles .nx-theme-form .nx-theme-button-2 {
+    width: 100px; /* Set a fixed width for all buttons */
+    height: 40px; /* Set a fixed height for all buttons */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-color: #67bd4a !important;
+}
+
+/* Specific sizing for repeating section "Add new line" button */
+.nx-repeating-section-container+.btn.btn-repeating-section-new-row {
+    margin: .6rem 0 0 !important;
+    min-height: 33px !important;
+    min-width: 100px !important;
+    width: 150px !important;
+}
+
+/* Specifc size for repeating section "delete line" (trashcan) button */
+.ntx-repeating-section-remove-button {
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transition: all .3s ease !important;
+    width: 28px !important;
 }
