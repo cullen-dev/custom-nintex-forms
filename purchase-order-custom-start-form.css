@@ -120,6 +120,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 
 /* Align button left */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-left-align .nx-button-container button {
+    justify-content: flex-start !important; /* Horizontally left-justify the button */
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
     border-radius: 4px; /* Set the border radius */
@@ -135,6 +136,7 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 Custom CSS class: custom-button-right-align */
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container button,
 [dir] .nx-theme-styles .nx-theme-form .custom-button-right-align .nx-button-container a {
+	justify-content: flex-end !important; /* Horizontally right-justify the button */
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
     border-radius: 4px; /* Set the border radius */
