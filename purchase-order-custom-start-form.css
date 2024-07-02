@@ -88,6 +88,10 @@ Blue #253e51
 	display: none;
 }
 
+[dir] .nx-theme-styles .nx-theme-form button[data-e2e="message-page-new-form"] {
+	width: auto !important;
+}
+
 /* unsure what this was for... 
 [dir] .nx-label-symbols .ng-st */
 
@@ -600,6 +604,7 @@ Custom CSS class: align-checkbox-short-text */
     text-decoration: none; /* Remove underline for anchor elements */
 	white-space: nowrap; /* Prevent text from wrapping */
 }
+
 
 /* Hover state for both button classes */
 [dir] .nx-theme-styles .nx-theme-form .nx-theme-button-1:hover,
