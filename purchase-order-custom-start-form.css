@@ -595,7 +595,7 @@ Custom CSS class: align-checkbox-short-text */
     width: 100px; /* Set a fixed width */
     height: 40px; /* Set a fixed height */
     border-radius: 4px; /* Set the border radius */
-    padding: 0 20px; /* Adjust padding to ensure consistent spacing */
+    /*padding: 0 20px; /* Adjust padding to ensure consistent spacing */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
     text-decoration: none; /* Remove underline for anchor elements */
 }
