@@ -159,19 +159,28 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
 
 /* Custom style for "How to Use this Form" Button */
 [dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container button {
-	background-color: #e9ecee !important;
-	border-color: #898f94 !important;
-	color: #575c61 !important;
+    background-color: #e9ecee !important;
+    border-color: #898f94 !important;
+    color: #575c61 !important;
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
     font-size: 14px; /* Set the font size */
     border-radius: 4px; /* Set the border radius */
     float: right !important;
     margin-right: 10px; /* Add margin to the right */
-    padding: 10px 20px; /* Set padding for the button */
+    padding: 0 20px; /* Set horizontal padding for the button */
     display: block; /* Display the button as a block element */
     width: auto; /* Set the width to auto */
-	height: 20px !important;
+    height: 40px !important; /* Set the height */
+    line-height: 40px; /* Match the line height to the button height for vertical centering */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+    text-align: center; /* Center the text horizontally */
+}
+
+/* Hover state */
+[dir] .nx-theme-styles .nx-theme-form .custom-hyperlink-button .nx-button-container button:hover {
+    background-color: #d0d0d0 !important; /* Slightly darker grey for hover */
+    border-color: #898f94 !important; /* Keep border color the same */
+    color: #575c61 !important; /* Keep font color the same */
 }
 
 /**** Group: Tab Header Styling ****/
@@ -566,8 +575,8 @@ ntx-action-panel .nx-action-panel .nx-button-container .nx-popover-prompt-contai
     width: 100px; /* Set a fixed width for all buttons */
     height: 40px; /* Set a fixed height for all buttons */
     display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center !important; /* Center horizontally */
+    align-items: center !important; /* Center vertically */
     border-color: #67bd4a !important;
 }
 
