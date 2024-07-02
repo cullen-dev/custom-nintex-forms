@@ -430,7 +430,8 @@ Custom CSS class: custom-hyperlink-button */
     color: black !important;
 }
 
-/* Align checkboxes with short text (add "align-checkbox-short-text" to CSS class property on checkbox */
+/* Vertically align checkboxes with center of short text control
+Custom CSS class: align-checkbox-short-text */
 .align-checkbox-short-text {
     display: flex;
     align-items: center;
@@ -628,3 +629,88 @@ Custom CSS class: custom-hyperlink-button */
     transition: all .3s ease !important;
     width: 28px !important;
 }
+
+/* Custom error message style */
+.nx-has-error .nx-error-message, .nx-nested-form-has-error .nx-error-message {
+    background-color: #4682B4 !important;
+    border: 1px solid #4682B4 !important;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 5px 13px;
+    width: 100%;
+}
+
+/* Custom error border style dropdown controls */
+.form-group.nx-has-error .ntx-simple-select .ng-select:not(.ng-select-opened) {
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-color: #4682B4 !important;
+}
+
+/* Custom error border style textbox controls */
+.nx-has-error .nx-zinc-control-input .form-control, .nx-has-error .variable-input {
+    border: 1px solid #4682B4!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
+
+/* Custom error border style datetime field calendar border */
+.nx-has-error .input-group-append .nx-btn-input-icon, .nx-has-error .input-group-append-end {
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border: 1px solid #4682B4!important;
+}
+
+/* Line Details Label style */
+[dir] .nx-theme-styles ntx-richtext-label .line-details .nx-theme-richtext p {
+  color: #FFFFFF !important;
+  font-size: 20px;
+}
+
+/* Line Details Label style */
+[dir] .nx-theme-styles ntx-richtext-label .line-details .nx-theme-richtext {
+    background-color: #253e51 !important;
+    padding: 10px;
+}
+
+
+/**** Custom Footer Style - not currently implemented
+
+/* General styles for the container
+.nx-valign-top.ng-star-inserted {
+    padding: 0 20px;  /* Adjust padding to account for left and right spacing
+    box-sizing: border-box; /* Ensure padding is included in the width calculation
+
+/* Styling the Verdesian logo
+.vls-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center the logo and add margin below
+}
+
+[dir] .nx-theme-styles .nx-form-footer {
+    width: 100%; /* Ensure the footer takes full width 
+    border-bottom-color: transparent !important;
+    background-color: #253e51;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align social links to the right 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Social links container 
+.social-links {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between the icons 
+    margin-left: auto; /* Push the social links to the right 
+}
+
+/* Social media icons 
+.social-links img {
+    height: 25px; /* Set the height for the social icons 
+    width: auto; /* Maintain aspect ratio 
+}
+*/
