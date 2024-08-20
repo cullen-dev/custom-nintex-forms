@@ -89,7 +89,14 @@ Blue #253e51
 }
 
 [dir] .nx-theme-styles .nx-theme-form button[data-e2e="message-page-new-form"] {
-	width: auto !important;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif; /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    border-radius: 4px; /* Set the border radius */
+    margin-left: 10px; /* Add margin to the right */
+    padding: 10px 20px; /* Set padding for the button */
+    display: block; /* Display the button as a block element */
+    width: auto; /* Set the width to auto */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */	
 }
 
 /* unsure what this was for... 

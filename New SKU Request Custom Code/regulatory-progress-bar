@@ -1,0 +1,71 @@
+<div class="stepper-wrapper">
+	<div class="stepper-item completed">
+		<div class="step-counter custom-tooltip">1
+      <span class="custom-tooltiptext">Form Submitted</span>
+		</div>
+		<div class="step-name">
+			<div class="line">Form</div>
+			<div class="line">Submitted</div>
+		</div>
+	</div>
+	<div class="stepper-item completed">
+		<div class="step-counter custom-tooltip">2
+      <span class="custom-tooltiptext">Marketing Approval</span>
+		</div>
+	</div>
+	<div class="stepper-item completed">
+		<div class="step-counter custom-tooltip">3
+      <span class="custom-tooltiptext">Item ID Creation</span>
+		</div>
+	</div>
+	<div class="stepper-item completed">
+		<div class="step-counter custom-tooltip">4
+      <span class="custom-tooltiptext">Formulations</span>
+		</div>
+	</div>
+	<div class="stepper-item completed">
+		<div class="step-counter custom-tooltip">5
+      <span class="custom-tooltiptext">EHS</span>
+		</div>
+	</div>
+	<div class="stepper-item active">
+		<div class="step-counter custom-tooltip">6
+		      <span class="custom-tooltiptext">Current Step</span>
+		</div>
+			<div class="step-name">
+				<div class="line">Regulatory</div>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">7
+      <span class="custom-tooltiptext">Operations</span>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">8
+      <span class="custom-tooltiptext">Manufacturing</span>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">9
+      <span class="custom-tooltiptext">Costing</span>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">10
+      <span class="custom-tooltiptext">Holds Validations</span>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">11
+      <span class="custom-tooltiptext">Oracle Item Creation</span>
+			</div>
+		</div>
+		<div class="stepper-item">
+			<div class="step-counter custom-tooltip">12
+      <span class="custom-tooltiptext">Workflow Complete</span>
+			</div>
+			<div class="step-name">Workflow Complete</div>
+		</div>
+	</div>
+
